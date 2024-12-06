@@ -1,0 +1,13 @@
+<h1>Liste des Tâches</h1>
+<mat-list>
+  <mat-list-item *ngFor="let task of tasks">
+    <mat-checkbox [(ngModel)]="task.completed"></mat-checkbox>
+    <h1>Ajouter une Tâche</h1>
+<mat-form-field>
+  <mat-label>Tâche</mat-label>
+  <input matInput [(ngModel)]="title" />
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="addTask()">Ajouter</button>
+  </mat-list-item>
+</mat-list>
+<button mat-button routerLink="/add">Ajouter une tâche</button>
